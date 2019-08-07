@@ -29,7 +29,8 @@
     "stylelint": "stylelint src/**/*.css",
     "eject": "react-scripts eject",
     "cover": "nyc npm run test",
-    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "cover:check": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "cover:generate": "nyc report --reporter=text-lcov",
     "commit": "git-cz"
   },
   "config": {
