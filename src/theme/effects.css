@@ -1,0 +1,9 @@
+:root {
+  /* border */
+  --border: 1px solid;
+  --border-default: var(--border) var(--grey-1);
+  --border-error: var(--border) var(--error);
+
+  /* transition */
+  --transition-default: 0.2 all ease;
+}

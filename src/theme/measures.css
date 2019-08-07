@@ -1,13 +1,12 @@
 :root {
   /* radius */
-  --radius-base: 2px;
+  --radius-base: 3px;
   --radius-half: 50%;
 
   /* space */
   --space-small: 7px;
-  --space-base: 12px;
-  --space-medium: 15px;
-  --space-large: 20px;
+  --space-base: 10px;
+  --space-large: 25px;
 
   --zero: 0;
 

@@ -1,3 +1,6 @@
-@import './z-index.css';
-@import './measures.css';
 @import './normalize.css';
+@import './z-index.css';
+@import './colors.css';
+@import './measures.css';
+@import './typography.css';
+@import './effects.css';

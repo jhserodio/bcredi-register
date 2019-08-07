@@ -1,0 +1,16 @@
+:root {
+  /* brand */
+  --primary: #4c8afe;
+
+  /* greyscale */
+  --white: #ffffff;
+  --grey-1: #e6e6e6;
+  --grey-2: #cccccc;
+  --grey-3: #8f8f8f;
+  --grey-4: #333333;
+  --black: #000000;
+
+  /* user colors */
+  --error: #ff5863;
+  --success: #2ecc71;
+}
