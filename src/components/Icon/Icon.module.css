@@ -1,0 +1,5 @@
+.Icon {
+  --white: white;
+
+  fill: var(--white);
+}

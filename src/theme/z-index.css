@@ -1,0 +1,7 @@
+:root {
+  --z-header: 1;
+  --z-sidebar: 2;
+  --z-modal: 3;
+  --z-dialog: 4;
+  --z-snackbar: 5;
+}

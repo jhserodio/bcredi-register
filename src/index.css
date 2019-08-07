@@ -1,0 +1,8 @@
+@import './theme/theme.css';
+
+body,
+.App {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

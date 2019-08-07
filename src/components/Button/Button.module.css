@@ -1,0 +1,37 @@
+/* BtnIcon */
+.BtnIcon {
+  --size: 32px;
+  --zero: 0;
+  --glass: transparent;
+  --radius: calc(var(--size) / 2);
+
+  width: var(--size);
+  height: var(--size);
+  background: var(--glass);
+  margin: var(--zero);
+  padding: var(--zero);
+  line-height: var(--zero);
+  border: var(--zero);
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.BtnIcon:hover,
+.BtnIcon:focus {
+  outline: none;
+  box-shadow: 0;
+}
+
+/* Reset */
+.BtnReset {
+  width: auto;
+  height: auto;
+  background: var(--glass);
+  border: var(--zero);
+  outline: none;
+  cursor: pointer;
+}
+
+.BtnReset:hover {
+  outline: none;
+}
