@@ -1,49 +1,26 @@
-defaults: &defaults
-  docker:
-      - image: circleci/node:10-browsers
-
 version: 2
 jobs:
-  prepare:
-    <<: *defaults
+  build:
+    working_directory: ~/bcredi-register
+    docker:
+      - image: circleci/node:latest
     steps:
       - checkout
       - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-      - run: npm install
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install
+          command: npm install
       - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-  build:
-    <<: *defaults
-    steps:
-      - checkout
-      - run: npm run build
-  tests:
-    <<: *defaults
-    steps:
-      - checkout
-      - run: npm run test
-  lint:
-    <<: *defaults
-    steps:
-      - checkout
-      - run: npm run eslint
-      - run: npm run stylelint
-
-workflows:
-  version: 2
-  build_accept_deploy:
-    jobs:
-      - prepare
-      - lint:
-          requires:
-            - prepare
-      - tests:
-          requires:
-            - lint
-      - build:
-          requires:
-            - tests
+            - ./node_modules
+      - run:
+          name: eslint
+          command: npm run eslint
+      - run:
+          name: stylelint
+          command: npm run stylelint
+      - run:
+          name: test
+          command: npm test
