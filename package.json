@@ -28,6 +28,8 @@
     "eslint:fix": "eslint -c .eslintrc --ext .js --ext .jsx --ignore-path .eslintignore --fix '**/*.{js,jsx}' --quiet",
     "stylelint": "stylelint src/**/*.css",
     "eject": "react-scripts eject",
+    "cover": "nyc npm run test",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "commit": "git-cz"
   },
   "config": {
@@ -55,6 +57,28 @@
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-declaration-use-variable": "^1.7.0",
     "stylelint-prettier": "^1.0.1"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js",
+      "src/**/*.jsx"
+    ],
+    "exclude": [
+      "**/*.test.js",
+      "**/*.mock.js",
+      "utils/flattenMessages.js",
+      "utils/intlEnzyme.js",
+      "redux/store.js",
+      "redux/reducer.js",
+      "redux/middleware.js",
+      "src/messages.js",
+      "src/containers"
+    ],
+    "reporter": [
+      "lcov",
+      "text",
+      "html"
+    ]
   },
   "husky": {
     "hooks": {

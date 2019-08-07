@@ -1,6 +1,11 @@
 ![icon](./img/b.png)
 
 # BCREDI REGISTER
+![build](https://img.shields.io/circleci/build/github/jhserodio/bcredi-register/master)
+![eslint](https://img.shields.io/badge/eslint-checked-%23482FBD)
+![stylelint](https://img.shields.io/badge/stylelint-checked-%23263238)
+![codeformat](https://img.shields.io/badge/code%20format-prettier-%231A2B34)
+
 > em desenvolvimento
 
 ## Installing / Getting started
