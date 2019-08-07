@@ -46,3 +46,18 @@ jobs:
           at: .
       - run: npm run eslint
       - run: npm run stylelint
+
+workflows:
+  version: 2
+  build_accept_deploy:
+    jobs:
+      - prepare
+      - lint:
+          requires:
+            - prepare
+      - tests:
+          requires:
+            - lint
+      - build:
+          requires:
+            - tests
