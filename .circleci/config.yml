@@ -16,34 +16,20 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - persist_to_workspace:
-          root: .
-          paths:
-            - node_modules
   build:
     <<: *defaults
     steps:
       - checkout
-      - attach_workspace:
-          at: .
       - run: npm run build
-      - persist_to_workspace:
-          root: .
-          paths:
-            - build
   tests:
     <<: *defaults
     steps:
       - checkout
-      - attach_workspace:
-          at: .
       - run: npm run test
   lint:
     <<: *defaults
     steps:
       - checkout
-      - attach_workspace:
-          at: .
       - run: npm run eslint
       - run: npm run stylelint
 
