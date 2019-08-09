@@ -2,7 +2,55 @@
 
 body,
 .App {
+  font-family: var(--font);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 1280px;
+  height: 100%;
+  display: flex;
+}
+
+.sidebar {
+  width: 46%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 54%;
+  height: 100%;
+}
+
+@media screen and (max-width: 85em) and (min-width: 64em) {
+  .container {
+    width: 980px;
+  }
+}
+
+@media screen and (max-width: 64.99em) {
+  .container,
+  .content {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content {
+    max-width: 769px;
+  }
+
+  .sidebar {
+    width: 0;
+    visibility: hidden;
+    display: none;
+  }
 }

@@ -1,2 +1,72 @@
-.Header {
+.Banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.backgroundImage {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.backgroundImage::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0) 17%,
+    rgba(0, 0, 0, 0) 44%,
+    rgba(0, 0, 0, 0.5) 72%,
+    rgba(0, 0, 0, 0.8)
+  );
+}
+
+.backgroundImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.messages {
+  --margin: calc(var(--space-base) * 4);
+
+  position: relative;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  max-width: 369px;
+  width: 80%;
+  margin: var(--margin);
+  color: var(--white);
+}
+
+.quote {
+  font-size: var(--subtitle);
+  line-height: var(--line-height-large);
+}
+
+.quote::after,
+.quote::before {
+  content: '"';
+}
+
+.author,
+.local {
+  display: block;
+  font-size: var(--body);
+  line-height: var(--line-height-large);
+}
+
+.author::after {
+  content: ',';
 }

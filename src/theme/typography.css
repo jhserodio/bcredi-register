@@ -3,7 +3,7 @@
   --font: Arial, Helvetica, sans-serif;
   /* font size */
   --title: 1.5rem;
-  --subtitle: 1.12rem;
+  --subtitle: 1.25rem;
   --body: 1rem;
   --caption: 0.875rem;
   --quote: 0.75rem;
@@ -13,8 +13,8 @@
   --weight-bold: bold;
 
   /* line height */
-  --line-height-extra: 1.67rem;
-  --line-height-large: 1.5rem;
-  --line-height-base: 1.29rem;
-  --line-height-small: 1.25rem;
+  --line-height-extra: 1.67em;
+  --line-height-large: 1.5em;
+  --line-height-base: 1.29em;
+  --line-height-small: 1.25em;
 }
