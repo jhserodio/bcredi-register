@@ -1,7 +1,7 @@
 const home = {
   title: 'Criar meu cadastro',
   message:
-    'Para acompanhar sua contratação de crédito você utilizará seu e-mail e CPF.',
+    'Para acompanhar sua contratação de crédito você utilizará seu e-mail e CPF',
   form: {
     name: {
       label: 'Nome',

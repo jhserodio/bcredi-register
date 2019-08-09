@@ -1,0 +1,73 @@
+.Home {
+  --width: 370px;
+
+  display: flex;
+  height: calc(100vh - (var(--header-height) * 2));
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  width: var(--width);
+  box-sizing: border-box;
+  padding: 0 var(--space-large);
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--title);
+  line-height: var(--line-height-small);
+  color: var(--grey-4);
+  margin: calc(var(--space-base) * 2) 0;
+}
+
+.message {
+  font-size: var(--body);
+  line-height: var(--line-height-large);
+  color: var(--grey-3);
+  max-width: 296px;
+}
+
+.content {
+  max-height: 80%;
+  height: 80%;
+  width: 100%;
+}
+
+.footer {
+  padding: calc(var(--space-base) * 1.6) 0;
+  border-top: var(--border-default);
+  width: 100%;
+  text-align: center;
+}
+
+.footer .message,
+.footer .link {
+  font-size: var(--caption);
+  line-height: var(--line-height-base);
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: none;
+  margin-left: var(--space-small);
+}
+
+/* dot */
+.message::after,
+.link::after {
+  content: '.';
+}
+
+@media screen and (max-width: 64.99em) {
+  .Home {
+    --width: 100%;
+  }
+
+  .header {
+    text-align: left;
+  }
+}

@@ -41,13 +41,6 @@ const sizeType = PropTypes.shape({
   height: PropTypes.number,
 });
 
-const viewBoxType = PropTypes.shape({
-  minX: PropTypes.number,
-  minY: PropTypes.number,
-  width: PropTypes.number,
-  height: PropTypes.number,
-});
-
 Logo.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.array])
     .isRequired,

@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import style from './Snackbar.module.css';
-import { BtnIcon } from '../../components/Button';
-import { IconClose } from '../../components/Icon';
 import { SNACKBAR_STATUS, SNACKBAR_TIMEOUT } from '../../constants/snackbar';
 
 const Snackbar = ({ content, active, snackbarSetActive }) => {

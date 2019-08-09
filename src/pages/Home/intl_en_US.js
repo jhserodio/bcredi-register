@@ -1,7 +1,7 @@
 const home = {
   title: 'Create my registration',
   message:
-    'To track your credit hiring you will use your email and social security number.',
+    'To track your credit hiring you will use your email and social security number',
   form: {
     name: {
       label: 'Name',
