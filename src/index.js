@@ -15,6 +15,7 @@ import { Main } from './template/Main/Main';
 import { SnackbarContainer } from './containers/Snackbar';
 
 import './index.css';
+import { Banner } from './template/Banner/Banner';
 
 addLocaleData([...pt, ...en]);
 
@@ -29,9 +30,16 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-          <Header />
-          <Main />
-          <SnackbarContainer />
+          <div className="container">
+            <div className="sidebar">
+              <Banner />
+            </div>
+            <div className="content">
+              <Header />
+              <SnackbarContainer />
+              <Main />
+            </div>
+          </div>
         </div>
       </BrowserRouter>
     </Provider>

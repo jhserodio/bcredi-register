@@ -34,11 +34,8 @@ const Snackbar = ({ content, active, snackbarSetActive }) => {
       ${switchStatus(content.status)}`}>
       <div className={style.container}>
         <div className={style.content}>
-          {`${content.message} : ${content.description}`}
+          {`${content.message}! ${content.description}`}
         </div>
-        <BtnIcon className={style.btn} onClick={() => closeSnackbar()}>
-          <IconClose className={style.svg} />
-        </BtnIcon>
       </div>
     </div>
   );

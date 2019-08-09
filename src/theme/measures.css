@@ -7,18 +7,10 @@
   --space-small: 7px;
   --space-base: 10px;
   --space-large: 25px;
+  --space-extra: 34px;
 
   --zero: 0;
 
-  /* device */
-  --device-xs: 600px;
-  --device-sm: 768px;
-  --device-md: 960px;
-  --device-lg: 1280px;
-  --device-xg: 1600px;
-
-  /* screen */
-  --screen-small: 68vw;
-  --screen-base: 90vw;
-  --screen-full: 100vw;
+  /* template */
+  --header-height: 64px;
 }
