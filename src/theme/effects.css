@@ -4,6 +4,9 @@
   --border-default: var(--border) var(--grey-1);
   --border-error: var(--border) var(--error);
 
+  /* box-shadow */
+  --box-shadow: inset 0 -1px 0 0 var(--grey-1);
+
   /* transition */
   --transition-default: 0.2 all ease;
 }

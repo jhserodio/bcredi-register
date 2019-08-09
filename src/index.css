@@ -29,6 +29,7 @@ body,
 .content {
   width: 54%;
   height: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 85em) and (min-width: 64em) {

@@ -1,0 +1,12 @@
+.Logo {
+  width: 75px;
+  height: 24px;
+}
+
+.letter {
+  fill: var(--grey-4);
+}
+
+.brand {
+  fill: var(--secondary);
+}

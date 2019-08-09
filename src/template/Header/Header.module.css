@@ -1,2 +1,14 @@
 .Header {
+  height: var(--header-height);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 var(--space-extra);
+}
+
+@media screen and (max-width: 64.99em) {
+  .Header {
+    padding: 0 var(--space-large);
+    box-shadow: var(--box-shadow);
+  }
 }
