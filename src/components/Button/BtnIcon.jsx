@@ -1,5 +1,5 @@
 import React, { cloneElement } from 'react';
-import PropTypes from 'prop-types';
+import Type from 'prop-types';
 
 import style from './Button.module.css';
 import { Button } from './Button';
@@ -12,17 +12,17 @@ const BtnIcon = ({ children, iconSize, className, ...props }) => (
   </Button>
 );
 
-const iconSizeType = PropTypes.shape({
-  height: PropTypes.number,
-  width: PropTypes.number,
+const iconSizeType = Type.shape({
+  height: Type.number,
+  width: Type.number,
 });
 
 BtnIcon.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.element.isRequired,
+  onClick: Type.func.isRequired,
+  children: Type.element.isRequired,
   iconSize: iconSizeType.isRequired,
-  className: PropTypes.string,
-  tabIndex: PropTypes.number,
+  className: Type.string,
+  tabIndex: Type.number,
 };
 
 BtnIcon.defaultProps = {
