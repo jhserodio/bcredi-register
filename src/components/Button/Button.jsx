@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Type from 'prop-types';
 
-const Button = ({ children, onClick, className, tabIndex }) => {
+const Button = ({ children, onClick, className, tabIndex, type }) => {
   let props =
     typeof tabIndex === 'number'
       ? {
@@ -10,21 +10,24 @@ const Button = ({ children, onClick, className, tabIndex }) => {
       : {};
 
   return (
-    <button className={className} onClick={onClick} type="button" {...props}>
+    <button className={className} onClick={onClick} type={type} {...props}>
       {children}
     </button>
   );
 };
 
 Button.propTypes = {
-  children: PropTypes.element.isRequired,
-  className: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
-  tabIndex: PropTypes.number,
+  type: Type.string,
+  children: Type.element.isRequired,
+  className: Type.string,
+  onClick: Type.func,
+  tabIndex: Type.number,
 };
 
 Button.defaultProps = {
+  onClick: undefined,
   tabIndex: null,
+  type: 'button',
   className: '',
 };
 

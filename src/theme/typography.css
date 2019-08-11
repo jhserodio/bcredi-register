@@ -17,4 +17,9 @@
   --line-height-large: 1.5em;
   --line-height-base: 1.29em;
   --line-height-small: 1.25em;
+
+  /* icon size */
+  --icon-size-large: 16px;
+  --icon-size: 14px;
+  --icon-size-small: 12px;
 }

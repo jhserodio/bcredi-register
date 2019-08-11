@@ -1,0 +1,20 @@
+.hint {
+  --color: var(--grey-3);
+  --fail: var(--error);
+  --ok: var(--success);
+  --pad: calc(var(--space-base) / 2);
+
+  font-size: var(--caption);
+  letter-spacing: var(--letter-space-defafaul);
+  padding-left: var(--pad);
+  margin: var(--pad) 0 0;
+  list-style: none;
+}
+
+._fail {
+  color: var(--fail);
+}
+
+._ok {
+  display: none;
+}

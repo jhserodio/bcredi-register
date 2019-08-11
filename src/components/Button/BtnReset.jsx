@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Type from 'prop-types';
 
 import style from './Button.module.css';
 import { Button } from './Button';
@@ -16,11 +16,10 @@ BtnReset.defaultProps = {
 };
 
 BtnReset.propTypes = {
-  tabIndex: PropTypes.number,
-  className: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-    .isRequired,
+  tabIndex: Type.number,
+  className: Type.string,
+  onClick: Type.func.isRequired,
+  children: Type.oneOfType([Type.element, Type.string]).isRequired,
 };
 
 export { BtnReset };

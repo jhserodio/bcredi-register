@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Logo.module.css';
-import PropTypes from 'prop-types';
+import Type from 'prop-types';
 
 const Logo = ({ className, size }) => (
   <svg
@@ -36,22 +36,13 @@ const Logo = ({ className, size }) => (
   </svg>
 );
 
-const sizeType = PropTypes.shape({
-  width: PropTypes.number,
-  height: PropTypes.number,
-});
-
-const viewBoxType = PropTypes.shape({
-  minX: PropTypes.number,
-  minY: PropTypes.number,
-  width: PropTypes.number,
-  height: PropTypes.number,
+const sizeType = Type.shape({
+  width: Type.number,
+  height: Type.number,
 });
 
 Logo.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array])
-    .isRequired,
-  className: PropTypes.string,
+  className: Type.string,
   size: sizeType,
 };
 

@@ -5,7 +5,9 @@ import { Logo } from '../../components/Logo/Logo';
 
 const Header = () => (
   <header className={style.Header}>
-    <Logo />
+    <h1 className={style.title}>
+      <Logo />
+    </h1>
   </header>
 );
 
