@@ -16,7 +16,7 @@
   z-index: var(--z-snackbar);
   box-sizing: border-box;
   padding: var(--space-large) 0;
-  transition: var(--transition);
+  transition: var(--transition-default);
   transform: var(--initial);
   text-align: center;
 }

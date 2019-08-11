@@ -1,8 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Type from 'prop-types';
 
 import style from './Snackbar.module.css';
 import { SNACKBAR_STATUS, SNACKBAR_TIMEOUT } from '../../constants/snackbar';
+import { FormattedMessage } from 'react-intl';
 
 const Snackbar = ({ content, active, snackbarSetActive }) => {
   function switchStatus(status) {
@@ -32,7 +33,8 @@ const Snackbar = ({ content, active, snackbarSetActive }) => {
       ${switchStatus(content.status)}`}>
       <div className={style.container}>
         <div className={style.content}>
-          {`${content.message}! ${content.description}`}
+          <FormattedMessage id={content.message} />!{' '}
+          <FormattedMessage id={content.description} />!
         </div>
       </div>
     </div>
@@ -40,13 +42,13 @@ const Snackbar = ({ content, active, snackbarSetActive }) => {
 };
 
 Snackbar.propTypes = {
-  snackbarSetActive: PropTypes.func.isRequired,
-  content: PropTypes.shape({
-    status: PropTypes.string.isRequired,
-    message: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+  snackbarSetActive: Type.func.isRequired,
+  content: Type.shape({
+    status: Type.string.isRequired,
+    message: Type.string.isRequired,
+    description: Type.string.isRequired,
   }).isRequired,
-  active: PropTypes.bool.isRequired,
+  active: Type.bool.isRequired,
 };
 
 export { Snackbar };

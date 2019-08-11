@@ -1,19 +1,21 @@
+import { FORM } from '../../constants/form';
+
 const home = {
   title: 'Create my registration',
   message:
     'To track your credit hiring you will use your email and social security number',
   form: {
-    name: {
-      label: 'Name',
-      placeholder: 'Write your full name',
+    [FORM.EMAIL]: {
+      label: 'E-mail',
+      placeholder: 'Write your e-mail',
     },
-    cpf: {
+    [FORM.CPF]: {
       label: 'CPF',
     },
-    birthDay: {
+    [FORM.BIRTH_DAY]: {
       label: 'Birth day',
     },
-    pass: {
+    [FORM.PASSWORD]: {
       name: 'Password',
       placeholder: 'create your password',
     },
@@ -28,6 +30,16 @@ const home = {
       use: 'Information Use Policy',
     },
     submit: 'Registry',
+  },
+  submit: {
+    ok: {
+      message: 'Congratulations',
+      description: 'Successful registration',
+    },
+    error: {
+      message: 'Error',
+      description: 'Check input fields and policy agreement',
+    },
   },
   footer: {
     message: 'I already made my registration',
