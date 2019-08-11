@@ -1,0 +1,66 @@
+.CheckBox {
+  --pad: var(--space-base);
+  --margin-left: 20px;
+  --color: var(--grey-2);
+  --accent: var(--primary);
+  --border: var(--border-default);
+  --fake-size: 26px;
+  --index-fake: 1;
+  --index-check: 2;
+
+  display: flex;
+  border: var(--border);
+  border-radius: var(--radius-base);
+  font-size: var(--quote);
+  padding: var(--space-base);
+  position: relative;
+}
+
+.label {
+  color: var(--color);
+  margin-left: var(--margin-left);
+  line-height: var(--line-height-extra);
+}
+
+.label a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.label::after {
+  content: '.';
+}
+
+.fake {
+  position: absolute;
+  left: var(--pad);
+  top: calc(50% - (var(--fake-size) / 2));
+  border-radius: var(--radius-base) !important;
+  z-index: var(--index-fake);
+  height: var(--fake-size) !important;
+  width: var(--fake-size) !important;
+  transition: var(--transition-default);
+}
+
+.fake:hover {
+  border-color: var(--accent) !important;
+}
+
+.fake._inactive {
+  border: var(--border);
+  border-width: 2px;
+}
+
+.fake._active {
+  background: var(--accent) !important;
+}
+
+.icon {
+  height: var(--icon-size-small) !important;
+  width: var(--icon-size-small) !important;
+}
+
+.input {
+  visibility: hidden;
+  z-index: var(--index-check);
+}

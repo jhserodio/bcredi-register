@@ -13,7 +13,6 @@
     ],
     "sh-waqar/declaration-use-variable": [[
       "/color/",
-      "/animation/",
       "transform",
       "transition",
       "z-index",

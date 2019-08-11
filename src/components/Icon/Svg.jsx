@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Icon.module.css';
-import PropTypes from 'prop-types';
+import Type from 'prop-types';
 
 const Svg = ({ children, className, viewBox, size }) => {
   const { minX, minY, width, height } = viewBox;
@@ -16,22 +16,21 @@ const Svg = ({ children, className, viewBox, size }) => {
   );
 };
 
-const sizeType = PropTypes.shape({
-  width: PropTypes.number,
-  height: PropTypes.number,
+const sizeType = Type.shape({
+  width: Type.number,
+  height: Type.number,
 });
 
-const viewBoxType = PropTypes.shape({
-  minX: PropTypes.number,
-  minY: PropTypes.number,
-  width: PropTypes.number,
-  height: PropTypes.number,
+const viewBoxType = Type.shape({
+  minX: Type.number,
+  minY: Type.number,
+  width: Type.number,
+  height: Type.number,
 });
 
 Svg.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array])
-    .isRequired,
-  className: PropTypes.string,
+  children: Type.oneOfType([Type.element, Type.array]).isRequired,
+  className: Type.string,
   viewBox: viewBoxType,
   size: sizeType,
 };
